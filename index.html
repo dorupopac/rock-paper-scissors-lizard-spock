@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script
       src="https://kit.fontawesome.com/4577078e84.js"
       crossorigin="anonymous"
@@ -21,23 +22,44 @@
       <div class="player-container" id="player">
         <h2>
           You - <span id="playerScore">0</span
-          ><span class="choice" id="playerChoice"> --- Choice</span>
+          ><span class="choice" id="playerChoice"></span>
         </h2>
-        <i class="far fa-hand-rock" title="Rock" id="playerRock"></i>
-        <i class="far fa-hand-paper" title="Paper" id="playerPaper"></i>
+        <i
+          class="far fa-hand-rock"
+          title="Rock"
+          id="playerRock"
+          onclick="select('rock')"
+        ></i>
+        <i
+          class="far fa-hand-paper"
+          title="Paper"
+          id="playerPaper"
+           onclick="select('paper')"
+        ></i>
         <i
           class="far fa-hand-scissors"
           title="Scissors"
           id="playerScissors"
+          onclick="select('scissors')"
         ></i>
-        <i class="far fa-hand-lizard" title="Lizard" id="playerLizard"></i>
-        <i class="far fa-hand-spock" title="Spock" id="playerSpock"></i>
+        <i
+          class="far fa-hand-lizard"
+          title="Lizard"
+          id="playerLizard"
+          onclick="select('lizard')"
+        ></i>
+        <i
+          class="far fa-hand-spock"
+          title="Spock"
+          id="playerSpock"
+          onclick="select('spock')"
+        ></i>
       </div>
       <!-- Computer Container -->
       <div class="player-container" id="computer">
         <h2>
           Computer - <span id="computerScore">0</span
-          ><span class="choice" id="computerChoice"> --- Choice</span>
+          ><span class="choice" id="computerChoice"></span>
         </h2>
         <i class="far fa-hand-rock" title="Rock" id="computerRock"></i>
         <i class="far fa-hand-paper" title="Paper" id="computerPaper"></i>
@@ -50,10 +72,10 @@
         <i class="far fa-hand-spock" title="Spock" id="computerSpock"></i>
       </div>
       <!-- Reset Icon -->
-      <i class="fas fa-sync-alt reset-icon" title="Reset"></i>
+      <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
       <!-- Results Text -->
       <div class="result-container">
-        <h3 class="result-text" id="resultText">You Won!</h3>
+        <h3 class="result-text" id="resultText"></h3>
       </div>
     </div>
   </body>

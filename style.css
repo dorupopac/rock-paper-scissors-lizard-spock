@@ -57,29 +57,32 @@ h2 {
   margin-bottom: 20px;
 }
 
-.far {
+.far,
+.fas {
   font-size: 50px;
+  margin-right: 40px;
   user-select: none;
 }
 
-.far:not(:last-of-type) {
-  margin-right: 40px;
+#player .far:last-of-type,
+#player .fas:last-of-type,
+#computer .far:last-of-type,
+#computer .fas:last-of-type {
+  margin-right: 0;
 }
 
 #player .far,
+#player .fas,
 #player .choice {
   color: #061161;
   cursor: pointer;
 }
 
 #computer .far,
+#computer .fas,
 #computer .choice {
   color: #780206;
   cursor: pointer;
-}
-
-.selected {
-  color: #000 !important;
 }
 
 .reset-icon {
@@ -115,7 +118,8 @@ h2 {
     margin: 50px 0 25px 25px;
   }
 
-  .far {
+  .far,
+  .fas {
     margin-right: 20px;
   }
 
@@ -139,7 +143,8 @@ h2 {
     margin: 43px 0 25px 20px;
   }
 
-  .far {
+  .far,
+  .fas {
     font-size: 43px;
   }
 
